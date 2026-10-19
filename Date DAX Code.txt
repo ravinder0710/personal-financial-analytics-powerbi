@@ -1,0 +1,12 @@
+Date = 
+ADDCOLUMNS (
+    CALENDARAUTO(),
+    "Year2", "Y-" & YEAR ( [Date] ),
+    "Year", YEAR ( [Date] ),
+    "Month", FORMAT ( [Date], "mmm" ),
+    "MN", MONTH ( [Date] ),
+    "StartOfMonth", DATE ( YEAR ( [Date] ), MONTH ( [Date] ), 1 ),
+    "Quarter", "Q" & QUARTER ( [Date] ),
+    "Week", WEEKNUM ( [Date], 2 ),   // 2 means week starts on Monday
+    "Day",DAY([Date])
+)
