@@ -120,25 +120,24 @@ Each family member's income generation, spending behavior, and net wealth contri
 
 The data architecture connects a centralized transactional ledger (`FactTable`) to dedicated dimensions for time intelligence, category reference, and member profiles:
 
-```text
-               ┌───────────────────────┐
-               │         Date          │
-               │   (Time Intelligence) │
-               └───────────┬───────────┘
-                           │ 1
-                           │
-                           │ *
-┌──────────────────┐       │       ┌──────────────────┐
-│  Category Table  │ 1     │     1 │       Img        │
-│ (Ref Dimensions) ├───────┼───────┤ (Member Avatars) │
-└─────────┬────────┘       │       └────────┬─────────┘
-          │ *              │                │ *
-          └──────────┐     │     ┌──────────┘
-                     ▼     ▼     ▼
-               ┌───────────────────────┐
-               │       FactTable       │
-               │ (2,216 Transactions)  │
-               └───────────────────────┘
+```mermaid
+flowchart TD
+    subgraph Dimensions
+        D["Date Dimension - Calendar & Time Intelligence (2023-2024)"]
+        C["Category Table - 23 Spending Categories (Need vs Want)"]
+        I["Img Dimension - 4 Family Member Profile Avatars"]
+    end
+
+    subgraph Fact
+        F["FactTable - 2,216 Household Transactions ($1.82M Flow)"]
+    end
+
+    D -->|"1:N (Date)"| F
+    C -->|"1:N (Category)"| F
+    I -->|"1:N (Family Member)"| F
+
+    F --> S["Cumulative Net Surplus: $538,264 (29.57% Saving Rate)"]
+    F --> T["Target Benchmarking: 30% Savings Goal Achieved in 2024 (33.86%)"]
 ```
 
 ### Dedicated Date Table (M-Engine & DAX Architecture)
@@ -307,8 +306,6 @@ personal-financial-analytics-powerbi/
 **Ravinder Gupta**  
 *Data Analyst | Business Intelligence & Financial Analytics Specialist*  
 
-- 📍 **Location:** Alwar, Rajasthan, India  
+- 📍 **Location:** Gurugram (Delhi-NCR), India  
 - 📧 **Email:** [iamravindergupta17@gmail.com](mailto:iamravindergupta17@gmail.com)  
-- 💬 **WhatsApp:** [+91 9982637026](https://wa.me/919982637026?text=Hi%20Ravinder,%20saw%20your%20Personal%20Finance%20portfolio)  
-- 💼 **LinkedIn:** [linkedin.com/in/ravinder-gupta-da](https://linkedin.com/in/ravinder-gupta-da)  
 - 🐙 **GitHub:** [github.com/ravinder0710](https://github.com/ravinder0710)
