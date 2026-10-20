@@ -248,7 +248,6 @@ RETURN
 ---
 
 ## 📂 Repository Structure
-
 ```text
 personal-financial-analytics-powerbi/
 │
@@ -258,14 +257,7 @@ personal-financial-analytics-powerbi/
 ├── Date DAX Code.txt                                           # Optimized CALENDARAUTO() script
 ├── Family_Financial_Analysis_Dashboard_HR_Standard_Final_v2.docx # Complete technical report
 │
-├── Icons/                                                      # Visual KPI iconography
-│   ├── cash.png
-│   ├── interest-rate.png
-│   ├── jar.png
-│   ├── money-bag.png
-│   ├── salary.png
-│   └── spending.png
-│
+├── data_architecture_pipeline.png                              # Relational Star Schema & Savings Threshold Pipeline
 ├── page_1_financial_overview.png                               # View 1: Executive Overview Page
 ├── page_2_savings_tracker.png                                  # View 2: Savings & Balance Tracker
 ├── page_3_tooltip_01_member.png                                # View 3: Tooltip 01 — Member Profile
